@@ -1,4 +1,10 @@
 {
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
   "browser_action": {
   },
   "manifest_version": 2,
