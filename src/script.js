@@ -44,6 +44,7 @@ async function run () {
   } else {
     video.addEventListener('enterpictureinpicture', () => setPipRequested(video, true), { once: true })
     video.addEventListener('leavepictureinpicture', () => setPipRequested(video, false), { once: true })
+    video.removeAttribute('disablepictureinpicture')
     await video.requestPictureInPicture()
   }
 }
