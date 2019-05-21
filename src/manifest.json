@@ -7,15 +7,16 @@
   },
   "browser_action": {
   },
+  "description": "Picture-in-Picture extension for video",
   "icons": {
     "16": "img/icon-16.png",
     "48": "img/icon-48.png",
     "128": "img/icon-128.png"
   },
   "manifest_version": 2,
-  "name": "Picture in Picture Extension",
+  "name": "Picture-in-Picture",
   "permissions": [
-    "<all_urls>",
+    "activeTab",
     "contextMenus"
   ],
   "version": "0.1.0"
