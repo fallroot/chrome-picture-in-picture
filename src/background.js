@@ -20,7 +20,7 @@ function run () {
 }
 
 function executeScript () {
-  chrome.tabs.executeScript({ file: 'script.js' })
+  chrome.tabs.executeScript({ file: 'script.js', allFrames: true })
 }
 
 run()

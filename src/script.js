@@ -4,6 +4,10 @@ function first (items) {
   }
 }
 
+function getAvailableVideos () {
+  return Array.from(document.querySelectorAll('video')).filter(v => v.readyState > 0)
+}
+
 function ifEmpty (a, b) {
   return isEmpty(a) ? b : a
 }
@@ -34,7 +38,7 @@ function sortByDimensions (elements) {
 }
 
 async function run () {
-  const videos = sortByDimensions(Array.from(document.querySelectorAll('video')))
+  const videos = sortByDimensions(getAvailableVideos())
   const video = first(ifEmpty(videos.filter(isPlaying), videos))
 
   if (!video) return
